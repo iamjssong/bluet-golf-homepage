@@ -19,3 +19,4 @@
 .hero-scroll i{background:#555}
 @media(max-width:800px){.menu-toggle span{background:#fff}.desktop-nav.mobile-open{background:#171717;color:#fff}.desktop-nav.mobile-open a{color:#fff}}
 .news-actions{display:flex;gap:10px;align-items:center}.auth-error{color:#c0392b;font-size:12px;line-height:1.5}
+.modal-backdrop{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:rgba(9,35,59,.55);backdrop-filter:blur(4px)}.modal-backdrop[hidden]{display:none}.modal-card{width:min(530px,100%);background:#fff;padding:34px;box-shadow:0 25px 80px rgba(9,35,59,.28);color:var(--ink)}
