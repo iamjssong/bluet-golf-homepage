@@ -67,7 +67,7 @@
 
       <section class="news section-pad" id="news">
         <div class="section-kicker">04 / NEWSROOM</div>
-        <div class="news-head"><h2>BlueT 소식</h2><div class="news-actions"><button class="button button-outline" id="admin-login">관리자 로그인</button><button class="button button-outline" id="open-post" hidden>공지 작성 <span>＋</span></button><button class="button button-outline" id="admin-logout" hidden>로그아웃</button></div></div>
+        <div class="news-head"><h2>BlueT 소식</h2><div class="news-actions"><button class="button button-outline" id="admin-login" type="button" onclick="document.querySelector('#auth-dialog').showModal()">관리자 로그인</button><button class="button button-outline" id="open-post" hidden>공지 작성 <span>＋</span></button><button class="button button-outline" id="admin-logout" hidden>로그아웃</button></div></div>
         <div id="post-list" class="post-list"></div>
         <div id="empty-posts" class="empty-posts" hidden>아직 등록된 공지가 없습니다.</div>
       </section>
