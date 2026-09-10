@@ -67,7 +67,7 @@
 
       <section class="news section-pad" id="news">
         <div class="section-kicker">04 / NEWSROOM</div>
-        <div class="news-head"><h2>BlueT 소식</h2><button class="button button-outline" id="open-post">공지 작성 <span>＋</span></button></div>
+        <div class="news-head"><h2>BlueT 소식</h2><div class="news-actions"><button class="button button-outline" id="admin-login">관리자 로그인</button><button class="button button-outline" id="open-post" hidden>공지 작성 <span>＋</span></button><button class="button button-outline" id="admin-logout" hidden>로그아웃</button></div></div>
         <div id="post-list" class="post-list"></div>
         <div id="empty-posts" class="empty-posts" hidden>아직 등록된 공지가 없습니다.</div>
       </section>
@@ -78,6 +78,8 @@
     <footer><div class="brand footer-brand"><span class="brand-mark"><i></i><i></i><i></i></span><span>BlueT<span class="brand-sub">GOLF COMPANY</span></span></div><p>Golf-domain commercialization partner for Physical AI.</p><span class="footer-copy">© 2026 BlueT Golf Company</span></footer>
 
     <dialog id="post-dialog"><form method="dialog" id="post-form"><div class="dialog-head"><div><span class="section-kicker">NEWSROOM</span><h2>새 공지 작성</h2></div><button class="dialog-close" value="cancel" aria-label="닫기">×</button></div><label>제목<input id="post-title" name="title" required maxlength="80" placeholder="공지 제목을 입력하세요" /></label><label>내용<textarea id="post-content" name="content" required maxlength="500" rows="5" placeholder="공지 내용을 입력하세요"></textarea></label><div class="dialog-actions"><button class="button button-outline" value="cancel">취소</button><button class="button button-primary" value="default">게시하기 <span>→</span></button></div></form></dialog>
+    <dialog id="auth-dialog"><form method="dialog" id="auth-form"><div class="dialog-head"><div><span class="section-kicker">ADMIN ACCESS</span><h2>관리자 로그인</h2></div><button class="dialog-close" value="cancel" aria-label="닫기">×</button></div><label>이메일<input id="admin-email" name="email" type="email" required autocomplete="username" placeholder="관리자 이메일" /></label><label>비밀번호<input id="admin-password" name="password" type="password" required autocomplete="current-password" placeholder="비밀번호" /></label><p id="auth-error" class="auth-error" role="alert" hidden></p><div class="dialog-actions"><button class="button button-outline" value="cancel">취소</button><button class="button button-primary" value="default">로그인 <span>→</span></button></div></form></dialog>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
   </body>
 </html>

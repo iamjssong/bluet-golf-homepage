@@ -18,3 +18,4 @@
 .hero-scroll{color:#aaa}
 .hero-scroll i{background:#555}
 @media(max-width:800px){.menu-toggle span{background:#fff}.desktop-nav.mobile-open{background:#171717;color:#fff}.desktop-nav.mobile-open a{color:#fff}}
+.news-actions{display:flex;gap:10px;align-items:center}.auth-error{color:#c0392b;font-size:12px;line-height:1.5}
