@@ -8,6 +8,8 @@ const form = document.querySelector("#post-form");
 const authDialog = document.querySelector("#auth-dialog");
 const authForm = document.querySelector("#auth-form");
 const authError = document.querySelector("#auth-error");
+const authClose = document.querySelector("#auth-close");
+const authCancel = document.querySelector("#auth-cancel");
 const adminLogin = document.querySelector("#admin-login");
 const adminLogout = document.querySelector("#admin-logout");
 const openPost = document.querySelector("#open-post");
@@ -32,10 +34,17 @@ const showAuthError = (message) => {
   authError.textContent = message;
   authError.hidden = false;
 };
-adminLogin.addEventListener("click", () => {
+const closeAuthDialog = () => {
+  authDialog.hidden = true;
+};
+const openAuthDialog = () => {
   authError.hidden = true;
-  authDialog.showModal();
-});
+  authDialog.hidden = false;
+  authForm.elements.email.focus();
+};
+adminLogin.addEventListener("click", openAuthDialog);
+authClose.addEventListener("click", closeAuthDialog);
+authCancel.addEventListener("click", closeAuthDialog);
 adminLogout.addEventListener("click", async () => {
   const { error } = await supabase.auth.signOut();
   if (error) showAuthError("로그아웃하지 못했습니다.");
@@ -49,7 +58,7 @@ authForm.addEventListener("submit", async (event) => {
     return;
   }
   authForm.reset();
-  authDialog.close();
+  closeAuthDialog();
 });
 form.addEventListener("submit", (event) => {
   event.preventDefault();
